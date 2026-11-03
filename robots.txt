@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vignoscope.github.io/sitemap.xml
