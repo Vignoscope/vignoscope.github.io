@@ -7,7 +7,7 @@
  "display": "standalone",
  "background_color": "#f4ebdd",
  "theme_color": "#7a1f35",
- "description": "Vignoscope, l’atlas interactif des vins de France : carte zoomable des 367 AOC, des régions aux appellations, domaines et fiches de dégustation, avec guides, jeux et parcours.",
+ "description": "Vignoscope, l’atlas interactif des vins de France : carte zoomable des 367 AOC, des régions aux appellations, domaines et fiches de dégustation, avec leçons, guides, jeux et parcours.",
  "icons": [
   {
    "src": "icons/icon-192.png",
