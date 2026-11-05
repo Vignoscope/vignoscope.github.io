@@ -3585,7 +3585,7 @@ label.btn{cursor:pointer}
   function rubriqueDe(n) {
     if (!n || n.id === 'france') return null;
     var id = n.id;
-    if (id === 'apprendre' || n.lecon || PGI[id] || id === 'parcours' || /^parcours-/.test(id) || hubDe(id) === 'apprendre') return 'apprendre';
+    if (id === 'apprendre' || n.lecon || PGI[id] || id === 'parcours' || /^(parcours|guide|serie|defi)-/.test(id) || id === 'quiz' || hubDe(id) === 'apprendre') return 'apprendre';
     if (id === 'reviser' || hubDe(id) === 'reviser') return 'reviser';
     if (id === 'atelier' || hubDe(id) === 'atelier') return 'atelier';
     return 'explorer';
