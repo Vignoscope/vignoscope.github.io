@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+Disallow: /_prochains/
 Sitemap: https://vignoscope.github.io/sitemap.xml

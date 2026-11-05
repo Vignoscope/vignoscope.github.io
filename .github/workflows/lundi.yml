@@ -1,0 +1,48 @@
+# Copié par tools/preparer-lundis.cjs dans .github/workflows/ du dépôt public. Voir PUBLICATION.md.
+name: Lundi et IndexNow
+
+on:
+  schedule:
+    - cron: '17 5 * * 1'   # lundi, 6 h 17 (heure d’hiver) ou 7 h 17 (heure d’été) à Paris
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: lundi
+  cancel-in-progress: false
+
+jobs:
+  publier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Publier les pages prévues pour la semaine
+        id: app
+        if: github.event_name != 'push'
+        run: python3 .github/lundi.py appliquer
+
+      - name: Enregistrer et redéployer
+        if: steps.app.outputs.change == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name Vignoscope
+          git config user.email vignoscope@users.noreply.github.com
+          git add -A
+          git commit -m "Défi de la semaine : publication automatique (semaine du ${{ steps.app.outputs.semaine }})"
+          git push
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" >/dev/null || true
+
+      - name: Signaler les pages modifiées (IndexNow)
+        if: github.event_name == 'push' || steps.app.outputs.change == '1'
+        run: |
+          sleep 120   # laisser GitHub Pages mettre la nouvelle version en ligne
+          python3 .github/lundi.py indexnow
