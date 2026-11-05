@@ -4,6 +4,7 @@
   python3 .github/lundi.py appliquer   publie les pages préparées pour la semaine en cours
                                         (_prochains/AAAA-MM-JJ/, le dossier le plus récent dont la date est passée)
   python3 .github/lundi.py indexnow    signale à IndexNow les pages HTML modifiées par le dernier commit
+                                        (toutes celles du plan du site si le message du commit contient [indexnow-tout])
 
 Aucune dépendance hors bibliothèque standard. LUNDI_DATE=AAAA-MM-JJ remplace la date du jour (tests).
 """
@@ -72,12 +73,37 @@ def urls_modifiees():
     return urls[:10000]
 
 
+def urls_plan():
+    import re
+    plan = (RACINE / 'sitemap.xml').read_text(encoding='utf-8') if (RACINE / 'sitemap.xml').exists() else ''
+    return re.findall(r'<loc>([^<]+)</loc>', plan)[:10000]
+
+
+def cle_en_ligne(cle, essais=10, pause=30):
+    """Attend que GitHub Pages serve le fichier de clé : IndexNow le vérifie et répond 403 s’il est absent."""
+    import time
+    for i in range(essais):
+        try:
+            with urllib.request.urlopen(f'{BASE}{cle}.txt?v={int(time.time())}', timeout=20) as r:
+                if r.read().decode('utf-8', 'replace').strip() == cle:
+                    return True
+        except Exception:
+            pass
+        if i < essais - 1:
+            time.sleep(pause)
+    return False
+
+
 def indexnow():
     cle = cle_indexnow()
     if not cle:
         print('IndexNow : pas de clé publiée, rien à signaler.')
         return
-    urls = urls_modifiees()
+    message = subprocess.run(['git', 'log', '-1', '--format=%B'], cwd=RACINE, capture_output=True, text=True).stdout
+    urls = urls_plan() if '[indexnow-tout]' in message else urls_modifiees()
+    if urls and not cle_en_ligne(cle):
+        print('IndexNow : le fichier de clé n’est pas encore en ligne, signalement reporté.')
+        return
     if not urls:
         print('IndexNow : aucune page modifiée.')
         return

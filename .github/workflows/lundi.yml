@@ -42,7 +42,7 @@ jobs:
           gh api -X POST "repos/${{ github.repository }}/pages/builds" >/dev/null || true
 
       - name: Signaler les pages modifiées (IndexNow)
-        if: github.event_name == 'push' || steps.app.outputs.change == '1'
+        if: github.event_name != 'schedule' || steps.app.outputs.change == '1'
         run: |
-          sleep 120   # laisser GitHub Pages mettre la nouvelle version en ligne
+          sleep 60   # GitHub Pages met la nouvelle version en ligne ; le script attend ensuite le fichier de clé
           python3 .github/lundi.py indexnow
