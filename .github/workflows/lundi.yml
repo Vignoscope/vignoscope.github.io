@@ -3,7 +3,8 @@ name: Lundi et IndexNow
 
 on:
   schedule:
-    - cron: '17 5 * * 1'   # lundi, 6 h 17 (heure d’hiver) ou 7 h 17 (heure d’été) à Paris
+    # Chaque jour : le lundi publie la semaine ; les autres jours rattrapent un lundi manqué (sinon rien ne change).
+    - cron: '17 5 * * *'   # 6 h 17 (heure d’hiver) ou 7 h 17 (heure d’été) à Paris
   workflow_dispatch:
   push:
     branches: [main]
@@ -11,6 +12,7 @@ on:
 permissions:
   contents: write
   pages: write
+  issues: write
 
 concurrency:
   group: lundi
@@ -19,12 +21,14 @@ concurrency:
 jobs:
   publier:
     runs-on: ubuntu-latest
+    env:
+      LUNDI_RAPPORT: ${{ runner.temp }}/lundi-rapport.md
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 2
 
-      - name: Publier les pages prévues pour la semaine
+      - name: Publier les semaines dont le lundi est passé
         id: app
         if: github.event_name != 'push'
         run: python3 .github/lundi.py appliquer
@@ -39,10 +43,17 @@ jobs:
           git add -A
           git commit -m "Défi de la semaine : publication automatique (semaine du ${{ steps.app.outputs.semaine }})"
           git push
-          gh api -X POST "repos/${{ github.repository }}/pages/builds" >/dev/null || true
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" >/dev/null \
+            || echo "::warning::Nouvelle construction GitHub Pages non demandée : vérifier que le site est à jour."
 
       - name: Signaler les pages modifiées (IndexNow)
-        if: github.event_name != 'schedule' || steps.app.outputs.change == '1'
+        if: steps.app.outcome != 'failure' && (github.event_name != 'schedule' || steps.app.outputs.change == '1')
         run: |
           sleep 60   # GitHub Pages met la nouvelle version en ligne ; le script attend ensuite le fichier de clé
           python3 .github/lundi.py indexnow
+
+      - name: Échec de publication — ouvrir une issue
+        if: failure() || steps.app.outputs.echec == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/lundi.py signaler

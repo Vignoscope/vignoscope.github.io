@@ -1,0 +1,55 @@
+{
+ "semaine": "2026-12-07",
+ "prepare": "2026-11-06",
+ "fichiers": {
+  "defis/defi-2026-12-07.html": {
+   "avant": null,
+   "apres": "09c37df11dec39e090af688b0c436502591f17c7b4d2319d642b89846237ad80"
+  },
+  "defis/index.html": {
+   "avant": "7a8dd04243a7c0f1486ba9e71abc6fbba010d06cd0df837733ba2e7c1d103f30",
+   "apres": "580b9a13657d13e416e3cbc593dc021196924ddc922240914a31f6e104076b3f"
+  },
+  "quiz/index.html": {
+   "avant": "b447eabf5c356597ad3d9b0ea8928803265115374345833ac31e19da04aedcb6",
+   "apres": "20220ddae24479e3dd9cbf5446459090132e382d7f81e85815abe988c1fd5192"
+  }
+ },
+ "plan": {
+  "ajouts": [
+   {
+    "loc": "https://vignoscope.github.io/",
+    "ligne": "<url><loc>https://vignoscope.github.io/</loc><lastmod>2026-12-07</lastmod></url>"
+   },
+   {
+    "loc": "https://vignoscope.github.io/defis/defi-2026-12-07.html",
+    "ligne": "<url><loc>https://vignoscope.github.io/defis/defi-2026-12-07.html</loc><lastmod>2026-12-07</lastmod></url>"
+   },
+   {
+    "loc": "https://vignoscope.github.io/defis/defi-2026-11-30.html",
+    "ligne": "<url><loc>https://vignoscope.github.io/defis/defi-2026-11-30.html</loc><lastmod>2026-12-07</lastmod></url>"
+   },
+   {
+    "loc": "https://vignoscope.github.io/defis/defi-2026-11-23.html",
+    "ligne": "<url><loc>https://vignoscope.github.io/defis/defi-2026-11-23.html</loc><lastmod>2026-12-07</lastmod></url>"
+   },
+   {
+    "loc": "https://vignoscope.github.io/defis/defi-2026-11-16.html",
+    "ligne": "<url><loc>https://vignoscope.github.io/defis/defi-2026-11-16.html</loc><lastmod>2026-12-07</lastmod></url>"
+   },
+   {
+    "loc": "https://vignoscope.github.io/defis/defi-2026-11-09.html",
+    "ligne": "<url><loc>https://vignoscope.github.io/defis/defi-2026-11-09.html</loc><lastmod>2026-12-07</lastmod></url>"
+   },
+   {
+    "loc": "https://vignoscope.github.io/defis/",
+    "ligne": "<url><loc>https://vignoscope.github.io/defis/</loc><lastmod>2026-12-07</lastmod></url>"
+   },
+   {
+    "loc": "https://vignoscope.github.io/quiz/",
+    "ligne": "<url><loc>https://vignoscope.github.io/quiz/</loc><lastmod>2026-12-07</lastmod></url>"
+   }
+  ],
+  "retraits": []
+ }
+}

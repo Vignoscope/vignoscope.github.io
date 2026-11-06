@@ -1,0 +1,51 @@
+{
+ "semaine": "2026-11-23",
+ "prepare": "2026-11-06",
+ "fichiers": {
+  "apprendre/rhone-nord-sud.html": {
+   "avant": "cd858555da57626f682be464849f86fffed03f626cebb6ec7cd8c0f53b6af935",
+   "apres": "3689a44531d19b7d43ff4967a6ec7f3602b23fbb6ad1155e33f2a3cb2535518d"
+  },
+  "defis/defi-2026-11-23.html": {
+   "avant": null,
+   "apres": "c4ab38b423e0136b301892f91b58ab97f654a2af230eef57424fa7acfc2c0544"
+  },
+  "defis/index.html": {
+   "avant": "d44daf3454e04685ff87c3dcea9c63b2c3679fbcce5be73386f1c503538d3517",
+   "apres": "ecdb7f803a6ed66af078d11c5f1fe9efdfd068aebd60cf004512566bd4fc56fd"
+  },
+  "quiz/index.html": {
+   "avant": "fb04577f5a564e43b08cf2ec1f822fb2195d69bcadb0356c7230cd6d10bf0bc8",
+   "apres": "078c2ecbaec075d77e6e68e0b7791df416033c0bdc549fd5cbe02a741a57c8bf"
+  }
+ },
+ "plan": {
+  "ajouts": [
+   {
+    "loc": "https://vignoscope.github.io/",
+    "ligne": "<url><loc>https://vignoscope.github.io/</loc><lastmod>2026-11-23</lastmod></url>"
+   },
+   {
+    "loc": "https://vignoscope.github.io/defis/defi-2026-11-23.html",
+    "ligne": "<url><loc>https://vignoscope.github.io/defis/defi-2026-11-23.html</loc><lastmod>2026-11-23</lastmod></url>"
+   },
+   {
+    "loc": "https://vignoscope.github.io/defis/defi-2026-11-16.html",
+    "ligne": "<url><loc>https://vignoscope.github.io/defis/defi-2026-11-16.html</loc><lastmod>2026-11-23</lastmod></url>"
+   },
+   {
+    "loc": "https://vignoscope.github.io/defis/defi-2026-11-09.html",
+    "ligne": "<url><loc>https://vignoscope.github.io/defis/defi-2026-11-09.html</loc><lastmod>2026-11-23</lastmod></url>"
+   },
+   {
+    "loc": "https://vignoscope.github.io/defis/",
+    "ligne": "<url><loc>https://vignoscope.github.io/defis/</loc><lastmod>2026-11-23</lastmod></url>"
+   },
+   {
+    "loc": "https://vignoscope.github.io/quiz/",
+    "ligne": "<url><loc>https://vignoscope.github.io/quiz/</loc><lastmod>2026-11-23</lastmod></url>"
+   }
+  ],
+  "retraits": []
+ }
+}

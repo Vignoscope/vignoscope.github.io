@@ -1,0 +1,39 @@
+{
+ "semaine": "2026-11-09",
+ "prepare": "2026-11-06",
+ "fichiers": {
+  "defis/defi-2026-11-09.html": {
+   "avant": null,
+   "apres": "c7d53350189b0c159669a23d51b106fb9cd8d9292aea080f750c5f17f524b17d"
+  },
+  "defis/index.html": {
+   "avant": "067b9714bbb2281b0eba5d8d9fc710da91ff9dfe41496c01b2086fe62c8a98a4",
+   "apres": "011247098e1c0624646061cccdd03016aecdf4a70967826ba3d196bfb04d923a"
+  },
+  "quiz/index.html": {
+   "avant": "1ebcd073f8f0db5bf1d7fe69d85901cfab3e82672bdd40a3df1d5f4a91710e83",
+   "apres": "a423499cd253d99170cc853ba4cfe0c40156c9cb257ca7051015111349a64da1"
+  }
+ },
+ "plan": {
+  "ajouts": [
+   {
+    "loc": "https://vignoscope.github.io/",
+    "ligne": "<url><loc>https://vignoscope.github.io/</loc><lastmod>2026-11-09</lastmod></url>"
+   },
+   {
+    "loc": "https://vignoscope.github.io/defis/defi-2026-11-09.html",
+    "ligne": "<url><loc>https://vignoscope.github.io/defis/defi-2026-11-09.html</loc><lastmod>2026-11-09</lastmod></url>"
+   },
+   {
+    "loc": "https://vignoscope.github.io/defis/",
+    "ligne": "<url><loc>https://vignoscope.github.io/defis/</loc><lastmod>2026-11-09</lastmod></url>"
+   },
+   {
+    "loc": "https://vignoscope.github.io/quiz/",
+    "ligne": "<url><loc>https://vignoscope.github.io/quiz/</loc><lastmod>2026-11-09</lastmod></url>"
+   }
+  ],
+  "retraits": []
+ }
+}

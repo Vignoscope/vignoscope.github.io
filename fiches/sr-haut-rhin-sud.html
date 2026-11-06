@@ -55,6 +55,20 @@ code{font-size:.9em}
 .bref{margin:14px 0 6px;padding:12px 14px;border-radius:12px;background:var(--wash)}.bref .surtitre{margin:0 0 4px}.bref p{margin:.3em 0}.bref ul{margin:.4em 0}
 .schema-fig{margin:12px 0}.schema-fig svg{width:100%;height:auto;max-width:560px;display:block;border-radius:10px}
 .partage{display:flex;flex-wrap:wrap;align-items:center;gap:8px}.partage button{font:inherit;font-weight:600;min-height:44px;padding:8px 16px;border-radius:999px;border:1px solid var(--wine);background:transparent;color:var(--wine);cursor:pointer}.partage input{font:inherit;width:100%;max-width:100%;padding:8px;border:1px solid var(--rule);border-radius:8px;background:var(--bg);color:var(--fg)}
+.q-consigne{color:var(--mute);font-size:.95rem;margin:.3em 0}
+.question .choix:has(.q-choix){list-style:none;padding:0;counter-reset:qc}
+.q-choix{display:flex;align-items:center;gap:12px;width:100%;text-align:left;font:inherit;color:inherit;min-height:48px;padding:10px 14px;margin:6px 0;border:1.5px solid var(--rule);border-radius:12px;background:transparent;cursor:pointer}
+.q-choix:hover:not(:disabled){border-color:var(--wine)}.q-choix:disabled{cursor:default}
+.q-choix::before{counter-increment:qc;content:counter(qc,upper-alpha);flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:.8rem;font-weight:700;border:1.5px solid var(--rule)}
+.is-correct .q-choix{border-color:#2f6b3b;box-shadow:inset 0 0 0 1px #2f6b3b}.is-correct .q-choix::before{background:#2f6b3b;border-color:#2f6b3b;color:#fff}
+.is-chosen .q-choix{border-color:var(--wine);opacity:.85}
+.repondu li:not(.is-correct):not(.is-chosen) .q-choix{opacity:.55}
+.q-verdict{font-weight:700;margin:.4em 0}.q-verdict.is-ok{color:#2f6b3b}.q-verdict.is-ko{color:var(--wine)}
+@media (prefers-color-scheme:dark){.is-correct .q-choix{border-color:#7fc28d;box-shadow:inset 0 0 0 1px #7fc28d}.is-correct .q-choix::before{background:#7fc28d;border-color:#7fc28d;color:#1d1317}.q-verdict.is-ok{color:#7fc28d}}
+.cta-debut{font-size:1.05rem;padding:13px 22px}
+.guide-q{margin:18px 0 8px;padding:4px 14px 10px;border:1px solid var(--rule);border-radius:14px}.guide-q h2{border-top:0;margin-top:12px}
+.atelier-anim{display:grid;grid-template-columns:minmax(0,180px) 1fr;gap:16px;align-items:start}.qr-fig{margin:0}.qr-fig svg{width:100%;height:auto;display:block;border-radius:6px;box-shadow:0 0 0 6px #fff}.qr-fig figcaption{font-size:.85rem;color:var(--mute);margin-top:10px;overflow-wrap:anywhere}
+@media (max-width:520px){.atelier-anim{grid-template-columns:1fr}.qr-fig{max-width:200px}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Régions","item":"https://vignoscope.github.io/fiches/"},{"@type":"ListItem","position":2,"name":"Alsace","item":"https://vignoscope.github.io/fiches/alsace.html"},{"@type":"ListItem","position":3,"name":"Haut-Rhin, de Turckheim à Thann"}]}</script>
 
