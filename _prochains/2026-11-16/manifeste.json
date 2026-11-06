@@ -1,18 +1,18 @@
 {
  "semaine": "2026-11-16",
- "prepare": "2026-11-06",
+ "prepare": "2026-11-07",
  "fichiers": {
   "defis/defi-2026-11-16.html": {
    "avant": null,
-   "apres": "7b342aa969362187fbd87edd4726a16929898e1d27e3070b1cbd2b3f75328d1d"
+   "apres": "7254cf21469cb2b25950314c8d64e0bf9f3cb53051102913ab5d55bf4bfa6cc0"
   },
   "defis/index.html": {
-   "avant": "011247098e1c0624646061cccdd03016aecdf4a70967826ba3d196bfb04d923a",
-   "apres": "d44daf3454e04685ff87c3dcea9c63b2c3679fbcce5be73386f1c503538d3517"
+   "avant": "229cbd2b3ec33fc030bba22723ab327a47be9ada839971feb23d54125bf71bf9",
+   "apres": "0d0c324c8cb8cfad989ae072062b4a0d7787f0882b274da719bb11a054d066ea"
   },
   "quiz/index.html": {
-   "avant": "166c06e0b98c80839d369dbdd231fd8bff8a85a3d44e0528be259f9a908043ab",
-   "apres": "bf93b7ba32b3fe9c528026494368a52871a3dae0900ea3080c74ecc565aa63bb"
+   "avant": "0cc511925727b1cfac1a631cd90f0a50f355db0cb1484414595fd864ceb59f95",
+   "apres": "aa9ff61ed4f0f00a34a14f1187f8731e5b5a5dc9e078d9abb9c0bc291048fb3b"
   }
  },
  "plan": {
