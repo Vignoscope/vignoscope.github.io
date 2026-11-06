@@ -21,8 +21,6 @@ concurrency:
 jobs:
   publier:
     runs-on: ubuntu-latest
-    env:
-      LUNDI_RAPPORT: ${{ runner.temp }}/lundi-rapport.md
     steps:
       - uses: actions/checkout@v4
         with:

@@ -58,6 +58,14 @@ class Echec(Exception):
     pass
 
 
+def chemin_rapport():
+    """Fichier du rapport d’échec : LUNDI_RAPPORT, sinon le dossier temporaire du runner GitHub (RUNNER_TEMP)."""
+    f = os.environ.get('LUNDI_RAPPORT')
+    if not f and os.environ.get('RUNNER_TEMP'):
+        f = os.path.join(os.environ['RUNNER_TEMP'], 'lundi-rapport.md')
+    return f
+
+
 def empreinte(b):
     return hashlib.sha256(b).hexdigest()
 
@@ -179,7 +187,7 @@ def appliquer():
                    f'- Semaines restantes : {", ".join(d.name for d in dues[len(appliquees):])}\n\n'
                    'Rien n’a été écrit pour la semaine en échec. Pour corriger : republier depuis les sources '
                    '(`tools/deployer.sh`), ce qui reconstruit les pages et refait la préparation.')
-        f = os.environ.get('LUNDI_RAPPORT')
+        f = chemin_rapport()
         if f:
             pathlib.Path(f).write_text(rapport, encoding='utf-8')
         print('ÉCHEC : ' + echec, file=sys.stderr)
@@ -189,7 +197,7 @@ def appliquer():
 
 def signaler():
     """Rend l’échec visible : issue ouverte (ou complétée) dans le dépôt, avec le rapport et le lien du journal."""
-    f = os.environ.get('LUNDI_RAPPORT')
+    f = chemin_rapport()
     rapport = pathlib.Path(f).read_text(encoding='utf-8') if f and pathlib.Path(f).exists() else \
         'Une étape du workflow « Lundi et IndexNow » a échoué (enregistrement, envoi ou redéploiement).'
     run = os.environ.get('GITHUB_RUN_ID')
