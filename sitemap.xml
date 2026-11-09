@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://vignoscope.github.io/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://vignoscope.github.io/</loc><lastmod>2026-11-09</lastmod></url>
   <url><loc>https://vignoscope.github.io/fiches/bordeaux.html</loc><lastmod>2026-11-04</lastmod></url>
   <url><loc>https://vignoscope.github.io/fiches/sr-medoc.html</loc><lastmod>2026-11-04</lastmod></url>
   <url><loc>https://vignoscope.github.io/fiches/sr-graves-sauternais.html</loc><lastmod>2026-11-04</lastmod></url>
@@ -836,8 +836,8 @@
   <url><loc>https://vignoscope.github.io/quiz/sec-moelleux.html</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://vignoscope.github.io/quiz/structure.html</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://vignoscope.github.io/defis/defi-2026-11-02.html</loc><lastmod>2026-11-06</lastmod></url>
-  <url><loc>https://vignoscope.github.io/defis/</loc><lastmod>2026-11-05</lastmod></url>
-  <url><loc>https://vignoscope.github.io/quiz/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://vignoscope.github.io/defis/</loc><lastmod>2026-11-09</lastmod></url>
+  <url><loc>https://vignoscope.github.io/quiz/</loc><lastmod>2026-11-09</lastmod></url>
   <url><loc>https://vignoscope.github.io/ateliers/sancerre-pouilly-fume.html</loc><lastmod>2026-11-07</lastmod></url>
   <url><loc>https://vignoscope.github.io/ateliers/bordeaux-rives.html</loc><lastmod>2026-11-07</lastmod></url>
   <url><loc>https://vignoscope.github.io/ateliers/rhone-nord-sud.html</loc><lastmod>2026-11-07</lastmod></url>
@@ -851,4 +851,5 @@
   <url><loc>https://vignoscope.github.io/comparer/</loc><lastmod>2026-11-05</lastmod></url>
   <url><loc>https://vignoscope.github.io/a-propos.html</loc><lastmod>2026-11-08</lastmod></url>
   <url><loc>https://vignoscope.github.io/confidentialite.html</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://vignoscope.github.io/defis/defi-2026-11-09.html</loc><lastmod>2026-11-09</lastmod></url>
 </urlset>
