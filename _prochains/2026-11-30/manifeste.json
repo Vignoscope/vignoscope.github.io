@@ -1,18 +1,18 @@
 {
  "semaine": "2026-11-30",
- "prepare": "2026-11-08",
+ "prepare": "2026-11-13",
  "fichiers": {
   "defis/defi-2026-11-30.html": {
    "avant": null,
-   "apres": "64850883ca629f3c9145e5a718fd8e465a542bfbf7fd97b92da3b6d5e19a5983"
+   "apres": "67a2dfb9b0ef4ca95796ad347c037991538f398bb0160f929563909420621bc8"
   },
   "defis/index.html": {
-   "avant": "ebfaec5a01c38e98133f4100cf1d77f0c95c4587da0dbd8c45b9cab35cabdf14",
-   "apres": "4f31f514ae458dd9ff1982e01108488ed0e9665be6854e9ceec7cf4da068ee08"
+   "avant": "399ef221803c18b7790239c3f66037c8b17386b69e7c5e1c3253fb3460c82d9e",
+   "apres": "47e2a35bea7a84e3dcb021121e11a350e3ba9671eb18df38c4df40719da6e675"
   },
   "quiz/index.html": {
-   "avant": "6d5d8e19e8f72ec2a5e23d5e2e177c5ac45ce81a3afc1d09a1c12d1e72fdd17a",
-   "apres": "777da579994bc0f25146d2aa92cbc828c1061cde6acd9bed73e7a4b848f0be9b"
+   "avant": "d2574f65af9cd571f79f1d5584bb1faf5c8b16f2aa0e374dff4e8851948f8e4c",
+   "apres": "0a7f40791e4dbd87f563fd742f1150ba7311df66a03a82805acd53ad69906656"
   }
  },
  "plan": {
@@ -32,10 +32,6 @@
    {
     "loc": "https://vignoscope.github.io/defis/defi-2026-11-16.html",
     "ligne": "<url><loc>https://vignoscope.github.io/defis/defi-2026-11-16.html</loc><lastmod>2026-11-30</lastmod></url>"
-   },
-   {
-    "loc": "https://vignoscope.github.io/defis/defi-2026-11-09.html",
-    "ligne": "<url><loc>https://vignoscope.github.io/defis/defi-2026-11-09.html</loc><lastmod>2026-11-30</lastmod></url>"
    },
    {
     "loc": "https://vignoscope.github.io/defis/",
