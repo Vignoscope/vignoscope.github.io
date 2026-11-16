@@ -72,15 +72,53 @@ code{font-size:.9em}
 .roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px;margin:14px 0 4px}.role{padding:2px 16px 12px;border:1px solid var(--rule);border-radius:14px}.role h2{border-top:0;margin-top:12px;color:var(--wine)}.role-part{background:var(--wash);border-color:transparent}.role-part .cta-debut{margin-top:2px}.role-liens{padding-left:1.1em}.role-liens li{margin:.35em 0}
 .adresse{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:1rem;overflow-wrap:anywhere}
 .situations{list-style:none;padding:0;margin:0;display:grid;gap:14px}.situation{padding:4px 16px 12px;border:1px solid var(--rule);border-radius:14px}.situation h3{font-family:Georgia,serif;font-weight:400;font-size:1.22rem;margin:12px 0 4px}.situation p{margin:.35em 0}.sit-at{font-size:1.08rem}.sit-liens a{display:inline-block;min-height:32px;padding:4px 0}
+/* Carte de situation (SVG produit à la construction, lib/cartes.cjs) */
+:root{--c-mer:#dde6e6;--c-terre:#fdfaf4;--c-eau:#8fb3c9;--c-hl:#7a1f35;--c-bord:#4a1020;--c-nom:#2b1519;--c-halo:#fdfaf4}
+@media (prefers-color-scheme:dark){:root{--c-mer:#141c22;--c-terre:#2a2024;--c-eau:#4f7890;--c-hl:#d9728c;--c-bord:#f2c4cf;--c-nom:#f2e8dc;--c-halo:#2a2024}}
+figure.carte{margin:1.1em 0 1.3em}
+figure.carte figcaption{font-size:.88rem;color:var(--mute);margin-top:.45em}
+.carte-sit{display:block;width:100%;max-width:620px;height:auto;border:1px solid var(--rule);border-radius:10px;background:var(--c-mer)}
+.c-mer{fill:var(--c-mer)}.c-terre{fill:var(--c-terre)}.c-eau{fill:none;stroke:var(--c-eau);stroke-linecap:round;stroke-linejoin:round}
+.c-aoc{fill:var(--c-hl);fill-opacity:.17;stroke:var(--c-terre);stroke-linejoin:round}
+.c-hl{fill:var(--c-hl);fill-opacity:.92;stroke:var(--c-bord);stroke-linejoin:round}
+.c-anneau{fill:none;stroke:var(--c-hl)}
+.c-pt circle{fill:var(--c-nom);stroke:var(--c-halo)}
+.c-nom text{font-size:calc(var(--u)*13.5px);font-family:"Source Sans 3","Segoe UI",system-ui,sans-serif;font-weight:500;fill:var(--c-nom);stroke:var(--c-halo);paint-order:stroke;stroke-linejoin:round}
+.c-nom text.c-ville{font-weight:700}
+.c-encart rect{fill:var(--c-mer);stroke:var(--rule)}.c-encart path{fill:var(--c-terre)}.c-encart circle{fill:var(--c-hl);stroke:var(--c-halo)}
+dl.faits{display:grid;grid-template-columns:max-content 1fr;gap:.3em 1.1em;margin:1em 0;padding:.75em 0;border-block:1px solid var(--rule)}
+dl.faits dt{font-size:.8rem;letter-spacing:.09em;text-transform:uppercase;color:var(--mute);padding-top:.2em}
+dl.faits dd{margin:0}
+@media (max-width:520px){dl.faits{grid-template-columns:1fr;gap:0}dl.faits dd{margin-bottom:.5em}}
+ul.enligne{list-style:none;padding:0;margin:.4em 0;display:flex;flex-wrap:wrap;gap:.35em .5em}
+ul.enligne li{margin:0}
+ul.enligne a,ul.enligne span{display:inline-block;padding:.32em .7em;border:1px solid var(--rule);border-radius:999px;text-decoration:none;font-size:.95rem}
+p.liste-noms{color:var(--fg)}
+.table-defile{overflow-x:auto;margin:1em 0}
+table.notes{border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:.95rem;min-width:100%}
+table.notes th,table.notes td{padding:.3em .55em;border-bottom:1px solid var(--rule);text-align:center;white-space:nowrap}
+table.notes th[scope=row]{text-align:left}
+table.notes td.n4{background:var(--wine);color:var(--bg);font-weight:700}table.notes td.n3{background:color-mix(in srgb,var(--wine) 62%,var(--bg))}table.notes td.n2{background:color-mix(in srgb,var(--wine) 38%,var(--bg))}table.notes td.n1{background:color-mix(in srgb,var(--wine) 16%,var(--bg))}
+table.notes td.n3{color:var(--bg)}
+dl.glossaire dt{font-weight:700;margin-top:1em;scroll-margin-top:1em}
+dl.glossaire dd{margin:.15em 0 0}
+nav.alpha{display:flex;flex-wrap:wrap;gap:.2em .35em;margin:1em 0}
+nav.alpha a{display:inline-block;min-width:2.2em;padding:.45em .3em;text-align:center;border:1px solid var(--rule);border-radius:8px;text-decoration:none;font-weight:700}
+@media (max-width:560px){.c-nom text{font-size:calc(var(--u)*18px)}}
+form.chercher{display:flex;gap:6px;flex:1 1 100%;width:100%;min-width:0;margin:2px 0 4px}
+form.chercher input{flex:1 1 auto;width:100%;min-width:0;font:inherit;padding:.5em .8em;border:1px solid var(--rule);border-radius:999px;background:var(--bg);color:var(--fg)}
+form.chercher button{flex:none;font:inherit;font-weight:600;padding:.5em 1em;border:1px solid var(--rule);border-radius:999px;background:var(--wash);color:var(--fg);cursor:pointer}
 /* Écrans tactiles : liens de liste et fil d’Ariane à 44 px de haut */
 @media (pointer:coarse){.voir a,.aocs a,.fiches-liees a,.ariane a,.sit-liens a,main li>a:only-child{display:inline-block;padding-top:10px;padding-bottom:10px}}
 .justif{display:block;font-size:.9rem;color:var(--mute)}.schema-fig figcaption{font-size:.95rem;color:var(--mute);margin-top:6px}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Régions","item":"https://vignoscope.github.io/fiches/"},{"@type":"ListItem","position":2,"name":"Bourgogne","item":"https://vignoscope.github.io/fiches/bourgogne.html"},{"@type":"ListItem","position":3,"name":"Côte de Beaune","item":"https://vignoscope.github.io/fiches/sr-cote-de-beaune.html"},{"@type":"ListItem","position":4,"name":"Puligny-Montrachet","item":"https://vignoscope.github.io/fiches/puligny-montrachet.html"},{"@type":"ListItem","position":5,"name":"Domaine Leflaive"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Domaine Leflaive","description":"La référence de Puligny, pionnière de la biodynamie en Bourgogne. Histoire, vigne, vinification et cuvées du domaine.","inLanguage":"fr","dateModified":"2026-11-08","isAccessibleForFree":true,"mainEntityOfPage":"https://vignoscope.github.io/fiches/domaine-leflaive.html","publisher":{"@type":"Organization","name":"Vignoscope","url":"https://vignoscope.github.io/"}}</script>
 
 </head><body>
 <a class="evitement" href="#contenu">Aller au contenu</a>
-<header class="site"><a class="marque" href="../">Vignoscope</a><nav aria-label="Rubriques"><a href="../apprendre/">Apprendre</a><a href="../fiches/">Régions</a><a href="../comparer/">Comparer</a><a href="../quiz/">Quiz</a></nav></header>
+<header class="site"><a class="marque" href="../">Vignoscope</a><nav aria-label="Rubriques"><a href="../apprendre/">Apprendre</a><a href="../fiches/">Régions</a><a href="../cepages/">Cépages</a><a href="../quiz/">Quiz</a></nav>
+<form class="chercher" role="search" action="../index.html" method="get"><input type="search" name="q" placeholder="Une appellation, un cépage, un domaine…" aria-label="Rechercher dans l’atlas" autocomplete="off" required><button type="submit">Rechercher</button></form></header>
 <main id="contenu">
 <nav class="ariane" aria-label="Fil d’Ariane"><a href="../fiches/">Régions</a> › <a href="../fiches/bourgogne.html">Bourgogne</a> › <a href="../fiches/sr-cote-de-beaune.html">Côte de Beaune</a> › <a href="../fiches/puligny-montrachet.html">Puligny-Montrachet</a></nav>
 <p class="surtitre">Domaine · Puligny-Montrachet</p>
@@ -91,6 +129,6 @@ code{font-size:.9em}
 <p><small>Vignoscope, l’atlas interactif des vins de France · aires des appellations : INAO · texte de présentation sans vérification individuelle datée.</small></p>
 <h2>Voir aussi</h2><ul class="voir"><li><a href="../fiches/chevalier-montrachet.html">Appellation : Chevalier-Montrachet</a></li><li><a href="../fiches/batard-montrachet.html">Appellation : Bâtard-Montrachet</a></li><li><a href="../fiches/bienvenues-batard-montrachet.html">Appellation : Bienvenues-Bâtard-Montrachet</a></li><li><a href="../fiches/montrachet.html">Appellation : Montrachet</a></li><li><a href="mailto:vignoscopefr@gmail.com?subject=Correction%20de%20la%20fiche%20Domaine%20Leflaive%20(Vignoscope)&amp;body=Bonjour%2C%0A%0AFiche%20%3A%20Domaine%20Leflaive%0Ahttps%3A%2F%2Fvignoscope.github.io%2Ffiches%2Fdomaine-leflaive.html%0A%0ACe%20qu%E2%80%99il%20faudrait%20corriger%20%3A%0A%0A%0ASource%20ou%20pr%C3%A9cision%20(facultatif)%20%3A%0A%0A">Signaler une correction</a> (par e-mail, nom du domaine et adresse de la fiche déjà remplis)</li></ul><h2>Partager</h2><div class="partage" data-url="https://vignoscope.github.io/fiches/domaine-leflaive.html" data-titre="Domaine Leflaive" data-contenu="domaine-leflaive" hidden><button type="button" data-partager hidden>Partager</button> <button type="button" data-copier>Copier le lien</button> <span class="partage-msg" role="status"></span></div><script>(function(){var b=document.querySelector('.partage');if(!b)return;b.hidden=false;var u=b.getAttribute('data-url'),t=b.getAttribute('data-titre'),c=b.getAttribute('data-contenu'),m=b.querySelector('.partage-msg'),n=b.querySelector('[data-partager]');function me(x){try{if(window.VIGNO_MESURE&&window.vignoMesure)window.vignoMesure('share',{contenu:c,methode:x})}catch(e){}}function cp(){var ok=function(){me('copie');m.textContent='Lien copié.'},ko=function(){m.innerHTML='';var i=document.createElement('input');i.readOnly=true;i.value=u;i.setAttribute('aria-label','Lien à copier');m.appendChild(document.createTextNode('Copiez ce lien : '));m.appendChild(i);i.focus();i.select()};try{navigator.clipboard.writeText(u).then(ok,ko)}catch(e){ko()}}if(navigator.share){n.hidden=false;n.addEventListener('click',function(){var p;try{p=navigator.share({title:t,url:u})}catch(e){cp();return}Promise.resolve(p).then(function(){me('natif');m.textContent='Partagé.'},function(e){if(e&&e.name==='AbortError'){m.textContent='';return}cp()})})}b.querySelector('[data-copier]').addEventListener('click',cp)})()</script>
 </main>
-<footer class="site"><nav aria-label="Pied de page"><a href="../">Atlas interactif</a><a href="../apprendre/">Apprendre</a><a href="../fiches/">Régions et appellations</a><a href="../comparer/">Comparer</a><a href="../quiz/">Quiz et défis</a><a href="../a-propos.html">À propos</a><a href="../confidentialite.html">Confidentialité</a></nav>
+<footer class="site"><nav aria-label="Pied de page"><a href="../">Atlas interactif</a><a href="../apprendre/">Apprendre</a><a href="../fiches/">Régions et appellations</a><a href="../cepages/">Cépages</a><a href="../classements/">Classements</a><a href="../millesimes.html">Millésimes</a><a href="../glossaire.html">Glossaire</a><a href="../comparer/">Comparer</a><a href="../quiz/">Quiz et défis</a><a href="../a-propos.html">À propos</a><a href="../confidentialite.html">Confidentialité</a></nav>
 <p class="meta"><a href="https://github.com/Vignoscope/vignoscope.github.io/issues/new?title=Erreur%20%3A%20Domaine%20Leflaive&amp;body=Page%20%3A%20https%3A%2F%2Fvignoscope.github.io%2Ffiches%2Fdomaine-leflaive.html%0A%0ACe%20qui%20me%20semble%20inexact%20%3A%0A%0ASource%20si%20possible%20%3A%0A">Signaler une erreur sur cette page</a> (GitHub, public)</p><p class="sante"><small><em>L’abus d’alcool est dangereux pour la santé, à consommer avec modération.</em></small></p></footer>
 </body></html>

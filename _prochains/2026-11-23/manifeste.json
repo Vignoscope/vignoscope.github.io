@@ -1,22 +1,22 @@
 {
  "semaine": "2026-11-23",
- "prepare": "2026-11-13",
+ "prepare": "2026-11-16",
  "fichiers": {
   "apprendre/rhone-nord-sud.html": {
-   "avant": "740c0b6c555b1c5b43ce13560b817068018b80ac401059793002f92921fb1774",
-   "apres": "294fe9885341caf15760717d76634bd41c983a42503e3c3e763a868933912236"
+   "avant": "0d95fcb4e74ac8445811c96f06056c566908e4141a4af701ab76106c69c5ef0c",
+   "apres": "7dace6aac43e7e6ca3ad50b0c5aa3f7b89e5c694b4f04493820c8a06158c5623"
   },
   "defis/defi-2026-11-23.html": {
    "avant": null,
-   "apres": "64e2b67055ac409904e1de820e33ff4101f876f99df728ebe57a80c95e67b1a9"
+   "apres": "d755dc6416ebd2ee0a20dd94302d118a52e8c352f163877c1a917f215989522a"
   },
   "defis/index.html": {
-   "avant": "ed0914726ac8be2f850c56a338519434d2d11ba7246cd98ada0a7cb8ee31ea13",
-   "apres": "399ef221803c18b7790239c3f66037c8b17386b69e7c5e1c3253fb3460c82d9e"
+   "avant": "fabc0a63749482d11f7d89c31c958e7ab557e364df041c0a0b10768a0be243af",
+   "apres": "86f2659b3147a86435e09a2a6bb3537e25daba7f49dc55722ce541778b99b481"
   },
   "quiz/index.html": {
-   "avant": "f0e043e6a05851e371fc2253f61c09e96d0da1084f52ee48d775eece34b720fd",
-   "apres": "d2574f65af9cd571f79f1d5584bb1faf5c8b16f2aa0e374dff4e8851948f8e4c"
+   "avant": "0db829361789cd09c5e1782ad6e82f97848a953ab594c0075abdb94c7f928b32",
+   "apres": "0777efdbce09ecbecae81952b8326504760ca97ba4f02525864f464c5a5c93e1"
   }
  },
  "plan": {
@@ -28,10 +28,6 @@
    {
     "loc": "https://vignoscope.github.io/defis/defi-2026-11-23.html",
     "ligne": "<url><loc>https://vignoscope.github.io/defis/defi-2026-11-23.html</loc><lastmod>2026-11-23</lastmod></url>"
-   },
-   {
-    "loc": "https://vignoscope.github.io/defis/defi-2026-11-16.html",
-    "ligne": "<url><loc>https://vignoscope.github.io/defis/defi-2026-11-16.html</loc><lastmod>2026-11-23</lastmod></url>"
    },
    {
     "loc": "https://vignoscope.github.io/defis/",
