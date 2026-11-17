@@ -2281,7 +2281,8 @@ label.btn{cursor:pointer}
   function signalerCorrection(nom, url) {
     var mail = DATA.meta.contact; if (!mail) return '';
     var sujet = 'Correction de la fiche ' + nom + ' (Vignoscope)', corps = 'Bonjour,\n\nFiche : ' + nom + '\n' + url + '\n\nCe qu’il faudrait corriger :\n\n\nSource ou précision (facultatif) :\n\n';
-    return '<p class="fine signaler"><a href="mailto:' + esc(mail) + '?subject=' + encodeURIComponent(sujet) + '&amp;body=' + encodeURIComponent(corps) + '">Signaler une correction</a> · par e-mail, avec le nom du domaine et l’adresse de la fiche déjà remplis.</p>';
+    return '<p class="fine signaler"><a href="mailto:' + esc(mail) + '?subject=' + encodeURIComponent(sujet) + '&amp;body=' + encodeURIComponent(corps) + '">Signaler une correction</a> · par e-mail, avec le nom du domaine et l’adresse de la fiche déjà remplis, ou avec le <a href="' + esc(url) + '#corriger" target="_blank" rel="noopener">formulaire guidé</a>.</p>' +
+      '<p class="fine signaler-carte">Vous êtes le domaine ? <a href="' + esc(url) + '#integrer" target="_blank" rel="noopener">Une carte de situation pour votre site</a>, gratuite, sans script ni cookie.</p>';
   }
   function cuveeAppellation(c, aoc) {
     if (c.appellation) return c.appellation;

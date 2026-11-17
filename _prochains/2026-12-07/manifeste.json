@@ -4,15 +4,15 @@
  "fichiers": {
   "defis/defi-2026-12-07.html": {
    "avant": null,
-   "apres": "52205943d1c366c82c2faf59e0ac0df2dac48b4a0056c759900be7a6fa4c38f5"
+   "apres": "52032e9d26babaae32072cca68bbabe281a1b7d455cadd329efe9f44da602030"
   },
   "defis/index.html": {
-   "avant": "72e2c2d50e852273a952c51e4e163430060893e08930223fde63bd89d80cb8ce",
-   "apres": "bd82dc87e6565f727bb344b716a3cf655eedcaccf9f5ea9aaae16277ef270e9a"
+   "avant": "ffdd0a5d83c4b7c4720488fc48a53481cddfc1b18e134e432f1231344b4e8bbd",
+   "apres": "81c2e9b821be9c0f21d04ad65b65a8e5a37953413cf4b74e23dbce3681aaf989"
   },
   "quiz/index.html": {
-   "avant": "30067b53cd845a46911616c96d6713974eae0182ac9d63d5c38bfea48ac30340",
-   "apres": "0df7558a6000db142e385b80c77968f8357c5f345a051bc6434f18ef1653f483"
+   "avant": "e5c8bdc61adfa2b592cd7df12fd439ebc4e04e3e4a563c55087f540d883ad395",
+   "apres": "3589bb56edcc06fadfeba50652ee5ede67c655863d31c71cd4e94c1d8827283c"
   }
  },
  "plan": {
