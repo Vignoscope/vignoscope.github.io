@@ -3,8 +3,8 @@
  "prepare": "2026-11-18",
  "fichiers": {
   "apprendre/rhone-nord-sud.html": {
-   "avant": "b5bead5a070f7f9b31c166deb5779b4a6f9315c7408a1d48e36f952dfc6f74f7",
-   "apres": "9c38920cab3a73d7a59638ecf87cc125a8bb50471e49fec6ea7c38ebc67b635e"
+   "avant": "7570f740816bac53beb3e1163ed4078638f04fd22dcaca6ff7063ef9b7d9ecc2",
+   "apres": "3aaf02f7830150177a644df0ad24a04fa857e394fa2c4aafc96950a2dd9ac3e8"
   },
   "defis/defi-2026-11-23.html": {
    "avant": null,
@@ -15,8 +15,8 @@
    "apres": "3803377daae735d04b79f12e58bfb87ab5e4e41f87e97f1e3860547a48db07d5"
   },
   "en/apprendre/rhone-nord-sud.html": {
-   "avant": "a51238c1dda41c90c7d52983b67e2128586cce2ebc29f36f858b1f0077c143b7",
-   "apres": "e29797f375e02a15a9f7057dd69465088bef88fda982c819ddc7a1ae1855fbee"
+   "avant": "8492092ec8cea2f883bd3524a7bc2b9881fc10cdaaad724226e26a0bb3aea8b3",
+   "apres": "6f7a11f08434714b04337f93a1399ff5dbad97ef78f56883b4caed0a9bc04138"
   },
   "quiz/index.html": {
    "avant": "702e92a72c771e9d1442e880f2845b46cfe5420e5aedadb76e21c7971cadffbd",
