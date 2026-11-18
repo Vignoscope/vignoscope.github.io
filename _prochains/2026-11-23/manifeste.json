@@ -1,6 +1,6 @@
 {
  "semaine": "2026-11-23",
- "prepare": "2026-11-17",
+ "prepare": "2026-11-18",
  "fichiers": {
   "apprendre/rhone-nord-sud.html": {
    "avant": "b5bead5a070f7f9b31c166deb5779b4a6f9315c7408a1d48e36f952dfc6f74f7",
@@ -13,6 +13,10 @@
   "defis/index.html": {
    "avant": "8a7369cc77ed1a1175fb2e767b6b3cb835aa3e4c8a1e9bcc81885b6ff586c041",
    "apres": "3803377daae735d04b79f12e58bfb87ab5e4e41f87e97f1e3860547a48db07d5"
+  },
+  "en/apprendre/rhone-nord-sud.html": {
+   "avant": "a51238c1dda41c90c7d52983b67e2128586cce2ebc29f36f858b1f0077c143b7",
+   "apres": "e29797f375e02a15a9f7057dd69465088bef88fda982c819ddc7a1ae1855fbee"
   },
   "quiz/index.html": {
    "avant": "702e92a72c771e9d1442e880f2845b46cfe5420e5aedadb76e21c7971cadffbd",
