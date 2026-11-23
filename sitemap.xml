@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://vignoscope.github.io/</loc><lastmod>2026-11-19</lastmod></url>
+  <url><loc>https://vignoscope.github.io/</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://vignoscope.github.io/fiches/bordeaux.html</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://vignoscope.github.io/fiches/sr-medoc.html</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://vignoscope.github.io/fiches/sr-graves-sauternais.html</loc><lastmod>2026-11-16</lastmod></url>
@@ -842,8 +842,8 @@
   <url><loc>https://vignoscope.github.io/defis/defi-2026-11-16.html</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://vignoscope.github.io/defis/defi-2026-11-09.html</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://vignoscope.github.io/defis/defi-2026-11-02.html</loc><lastmod>2026-11-06</lastmod></url>
-  <url><loc>https://vignoscope.github.io/defis/</loc><lastmod>2026-11-16</lastmod></url>
-  <url><loc>https://vignoscope.github.io/quiz/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://vignoscope.github.io/defis/</loc><lastmod>2026-11-23</lastmod></url>
+  <url><loc>https://vignoscope.github.io/quiz/</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://vignoscope.github.io/ateliers/sancerre-pouilly-fume.html</loc><lastmod>2026-11-07</lastmod></url>
   <url><loc>https://vignoscope.github.io/ateliers/bordeaux-rives.html</loc><lastmod>2026-11-07</lastmod></url>
   <url><loc>https://vignoscope.github.io/ateliers/rhone-nord-sud.html</loc><lastmod>2026-11-07</lastmod></url>
@@ -1798,4 +1798,5 @@
   <url><loc>https://vignoscope.github.io/en/sols/schiste.html</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://vignoscope.github.io/en/sols/silex.html</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://vignoscope.github.io/en/sols/volcanique.html</loc><lastmod>2026-11-18</lastmod></url>
+  <url><loc>https://vignoscope.github.io/defis/defi-2026-11-23.html</loc><lastmod>2026-11-23</lastmod></url>
 </urlset>
